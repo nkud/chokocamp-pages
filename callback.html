@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>chokocamp-shorts 認証</title>
+<style>body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.8;color:#17231F;background:#F4F7F6}
+code{display:block;word-break:break-all;background:#fff;border:1px solid #D5DFDB;border-radius:8px;padding:12px;font-size:13px}
+button{margin-top:8px;font:inherit;padding:6px 16px;border-radius:8px;border:0;background:#0D7A80;color:#fff;cursor:pointer}</style></head>
+<body><h1>認証が完了しました</h1>
+<p>このページのアドレス（下の文字列）をコピーして、Claude に送ってください。</p>
+<code id="u"></code><button type="button" id="b">コピー</button>
+<p style="font-size:13px;color:#5B6B66">chokocamp-shorts（ちょこきゃんぷの運営者専用ツール）の認証用ページです。</p>
+<script>
+var u=location.href;document.getElementById('u').textContent=u;
+document.getElementById('b').onclick=function(){var b=this;try{navigator.clipboard.writeText(u).then(function(){b.textContent='コピーしました'})}catch(e){}};
+</script></body></html>
